@@ -1,0 +1,10 @@
+Description:
+    Creates helper resources in relevant public destinations.
+
+Example:
+    rails generate modalbox_helper
+
+    This will create:
+        public/images/spinner.gif
+        public/stylesheets/modalbox_helper.css
+        public/javascripts/modalbox_helper.js

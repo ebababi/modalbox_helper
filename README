@@ -1,0 +1,34 @@
+= ModalboxHelper
+
+Modalbox Helper plugin is an ActionView helper that facilitates the use of the
+ModalBox javascript library, which in turn manages javascript pop-ups for the
+browser, based on Prototype and script.aculo.us frameworks.
+
+== Installation
+
+After installing the plugin on the rails enviroment it is required for the
+helper's static files to be copied in the public location, for the helper to be
+activated in the application controller and for the application layout to
+include the CSS files. A generator have been created for those tasks:
+
+    $ rails generate modalbox_helper
+
+Nevertheless, it is still required to update the application layout:
+
+    <%= stylesheet_link_tag 'modalbox_helper' %>
+    <%= javascript_include_tag 'modalbox_helper' %>
+
+== Usage
+
+Modal dialogs links are created through the use of the <tt>link_to_modal</tt>
+method. This method behaves exactly as the <tt>link_to</tt> method, but the
+destination content is loaded on a modal box.
+
+=== Examples
+
+This creates a modal dialog for the content of a url:
+
+  <%= link_to_modal 'Preferences', edit_user_registration_path %>
+
+
+Copyright (c) 2011 Nikolaos Anastopoulos, released under the MIT license
